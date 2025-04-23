@@ -17,7 +17,7 @@ public class TimeSlotsController : ControllerBase
     [HttpGet]
     public IActionResult GetByDate([FromQuery] DateTime date)
     {
-        var slots = StaticDataStore.TimeSlots
+        List<TimeSlot> slots = StaticDataStore.TimeSlots
             .Where(s => s.Date.Date == date.Date)
             .ToList();
 

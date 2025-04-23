@@ -2,28 +2,6 @@ namespace BookingApi.MockData;
 
 public static class StaticDataStore
 {
-    public static List<Participant> Participants { get; set; } = new()
-    {
-        new Participant
-        {
-            ParticipantId = 1,
-            Name = "Angelo",
-            Date = DateTime.Today,
-            Time = "10:15 AM",
-            Duration = 15,
-            Timezone = "Asia/Ho_Chi_Minh"
-        },
-        new Participant
-        {
-            ParticipantId = 2,
-            Name = "Kate Smith",
-            Date = DateTime.Today,
-            Time = "10:45 AM",
-            Duration = 15,
-            Timezone = "Asia/Ho_Chi_Minh"
-        }
-    };
-
     public static List<TimeSlot> TimeSlots { get; set; } = GenerateDummySlots();
 
     private static List<TimeSlot> GenerateDummySlots()
