@@ -24,9 +24,11 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 // Register the repositories
 builder.Services.AddScoped<IEventRepository, EventRepository>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
 
 // Register the services
 builder.Services.AddScoped<IEventManagementService, EventManagementService>();
+builder.Services.AddScoped<IParticipantService, ParticipantService>();
 
 // Add services to the container.
 
